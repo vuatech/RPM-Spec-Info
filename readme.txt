@@ -19,6 +19,19 @@ Macros:
 %{_rundir} = /run
 %{_localstatedir} = /var
 %{_sharedstatedir} = /var/lib
+%{buildroot} = %{_buildrootdir}/%{name}-%{version}-%{release}.%{_arch} same as $BUILDROOT
+%{_topdir} = %{getenv:HOME}/rpmbuild
+%{_builddir} = %{_topdir}/BUILD
+%{_rpmdir} = %{_topdir}/RPMS
+%{_sourcedir} = %{_topdir}/SOURCES
+%{_specdir} = %{_topdir}/SPECS
+%{_srcrpmdir} =%{_topdir}/SRPMS
+%{_buildrootdir} = %{_topdir}/BUILDROOT
+
+Finding BuildRequires Entries:
+Devel packages contain a pkgconfig folder with a file inside that can be called upon using pkgconfig()
+This can also be done if the devel package contains a cmake folder. In cmake case you can call cmake()
+typlib, %{mklibname "packagename"} can be used to called library packages if there is no other ways to do so.
 
 
 Cargo:
