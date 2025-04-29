@@ -48,3 +48,14 @@ go mod vendor = download of dependencies
 
 NodeJS:
 %nodejs_install = install macro
+
+
+Pnpm:
+pnpm config set store-dir pnpm_store = store dependencies to pnpm_store folder
+pnpm install --frozen = will download dependencies to the folder above folder
+pnpm config set store-dir %{_builddir}/%{name}-%{version}/pnpm_store = will set extracted pnpm_store folder as dependencies folder
+
+%build
+pnpm config set store-dir %{builddir}/%{name}-%{version}
+pnpm install --offline --frozen
+pnpm build(?) options in package.json file
