@@ -45,3 +45,6 @@ cargo install --locked --root %{buildroot}/usr --path .         Installs in buil
 
 Go:
 go mod vendor = download of dependencies
+
+NodeJS:
+%nodejs_install = install macro
