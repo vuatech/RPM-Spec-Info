@@ -57,5 +57,9 @@ pnpm config set store-dir %{_builddir}/%{name}-%{version}/pnpm_store = will set 
 
 %build
 pnpm config set store-dir %{builddir}/%{name}-%{version}
-pnpm install --offline --frozen
+pnpm install --offline --frozen --force
 pnpm build(?) options in package.json file
+
+
+Electron:
+ELECTRON_CACHE=  allows to pick local directory to download needed archive
