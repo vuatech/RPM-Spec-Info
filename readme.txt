@@ -47,7 +47,7 @@ Go:
 go mod vendor = download of dependencies
 
 NodeJS:
-%nodejs_install = install macro
+%nodejs_install = install macro same as doing npm_config_prefix=%{buildroot}%{_prefix} npm install -g %{S:0}
 
 
 Pnpm:
