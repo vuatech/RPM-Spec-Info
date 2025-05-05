@@ -47,7 +47,8 @@ Go:
 go mod vendor = download of dependencies
 
 NodeJS:
-npm pack in extracted tar will create archive with dependencies.
+npm install electron-builder@26.0.12 --omit=dev --cache ~/.npm   =  Will download cache and dependencies locally
+export NPM_CONFIG_CACHE=$PWD/.npm  =  will extract npm cache to local build directory
 %nodejs_install = install macro same as doing npm_config_prefix=%{buildroot}%{_prefix} npm install -g %{S:0}
 
 
