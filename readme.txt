@@ -19,6 +19,8 @@ Macros:
 %{_rundir} = /run
 %{_localstatedir} = /var
 %{_sharedstatedir} = /var/lib
+%{_unitdir} = /usr/lib/systemd
+%{_userunitdir} = /usr/lib/systemd/user
 %{buildroot} = %{_buildrootdir}/%{name}-%{version}-%{release}.%{_arch} same as $BUILDROOT
 %{_topdir} = %{getenv:HOME}/rpmbuild
 %{_builddir} = %{_topdir}/BUILD
