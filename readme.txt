@@ -42,8 +42,8 @@ tar -zxf %{SOURCE1}
 mkdir -p .cargo
 cat >> .cargo/config.toml << EOF
 EOF
-^ allows the importing of cargo vendore
-cargo install --locked --root %{buildroot}/usr --path path/to/build         Installs in buildroot dir but sometimes does not work dueo to virtual manifest 
+^ allows the importing of cargo vendor
+cargo install --locked --root %{buildroot}/usr --path path/to/build         Installs in buildroot dir but sometimes does not work due to virtual manifest 
 
 Go:
 go mod vendor = download of dependencies
