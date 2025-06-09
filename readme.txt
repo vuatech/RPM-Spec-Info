@@ -29,12 +29,13 @@ Macros:
 %{_specdir} = %{_topdir}/SPECS
 %{_srcrpmdir} =%{_topdir}/SRPMS
 %{_buildrootdir} = %{_topdir}/BUILDROOT
+ %{pyver} = Used to call current version of python used by system. python%{pyver}dist(pygobject) will call gobject.
+
 
 Finding BuildRequires Entries:
 Devel packages contain a pkgconfig folder with a file inside that can be called upon using pkgconfig()
 This can also be done if the devel package contains a cmake folder. In cmake case you can call cmake()
 typlib, %{mklibname "packagename"} can be used to called library packages if there is no other ways to do so.
-
 
 Cargo:
 cargo vendor = download of dependencies
@@ -43,7 +44,6 @@ mkdir -p .cargo
 cat >> .cargo/config.toml << EOF
 EOF
 ^ allows the importing of cargo vendor
-cargo install --locked --root %{buildroot}/usr --path path/to/build Installs in buildroot dir but sometimes does not work due to virtual manifest 
 
 Go:
 go mod vendor = download of dependencies
