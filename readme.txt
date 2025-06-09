@@ -3,8 +3,6 @@ Package has been published to cooker (repo). You can install the package by runn
 
 Macros:
 %global debug_package %{nil} = removes debug files
-%{_datadir} = /usr/share
-%{_bindir} = /usr/bin
 %{_iconsdir} = /usr/share/icons
 %{_sysconfdir} = /etc
 %{_prefix} = /usr
