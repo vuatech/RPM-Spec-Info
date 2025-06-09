@@ -1,5 +1,5 @@
 Copypaste response for issues:
-Package has been published to cooker (repo). You can install the package by running sudo dnf install --enablerepo=cooker-x86_64 | cooker-x86_64-extra. If you are on another architecture; substitute x86_64 for znver1 or aarch64.
+Package has been published to cooker (repo). You can install the package by running sudo dnf install --enablerepo=(cooker-x86_64, cooker-x86_64-non-free, cooker-x86_64-restricted, or cooker-x86_64-extra). If you are on another architecture; substitute x86_64 for znver1 or aarch64.
 
 Macros:
 %global debug_package %{nil} = removes debug files
@@ -36,14 +36,16 @@ Finding BuildRequires Entries:
 Devel packages contain a pkgconfig folder with a file inside that can be called upon using pkgconfig()
 This can also be done if the devel package contains a cmake folder. In cmake case you can call cmake()
 typlib, %{mklibname "packagename"} can be used to called library packages if there is no other ways to do so.
+Test logs/mock output from abf/build process can be used to frind provided lines for packages.
 
 Cargo:
 cargo vendor = download of dependencies
 tar -zxf %{SOURCE1}
 mkdir -p .cargo
 cat >> .cargo/config.toml << EOF
+{results from cargo vendor at the end of the process}
 EOF
-^ allows the importing of cargo vendor
+^ allows the importing of cargo dependencies
 
 Go:
 go mod vendor = download of dependencies
