@@ -29,7 +29,7 @@ Macros:
 %{_specdir} = %{_topdir}/SPECS
 %{_srcrpmdir} =%{_topdir}/SRPMS
 %{_buildrootdir} = %{_topdir}/BUILDROOT
- %{pyver} = Used to call current version of python used by system. python%{pyver}dist(pygobject) will call gobject.
+ %{pyver} = Used to call current version of python used by system. python%{pyver}dist(pygobject) will call python-gobject package.
 
 
 Finding BuildRequires Entries:
