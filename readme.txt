@@ -1,5 +1,5 @@
 Copypaste response for issues:
-Package has been published to cooker (repo). You can install the package by running sudo dnf install --enablerepo=cooker-x86_64 | cooker-x86_64-extra. If you are on another architecture; substitute x86_64 for znver1 or aarch64. If you do not comment in 7 days I will close this issue.
+Package has been published to cooker (repo). You can install the package by running sudo dnf install --enablerepo=cooker-x86_64 | cooker-x86_64-extra. If you are on another architecture; substitute x86_64 for znver1 or aarch64.
 
 Macros:
 %global debug_package %{nil} = removes debug files
