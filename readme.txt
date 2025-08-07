@@ -37,7 +37,7 @@ typlib, %{mklibname "packagename"} can be used to called library packages if the
 Test logs/mock output from abf/build process can be used to frind provided lines for packages.
 
 Cargo:
-cargo vendor = download of dependencies
+cargo vendor = download of dependencies into a vendor folder. This vendor folder needs to be compressed and added as a source
 tar -zxf %{SOURCE1}
 mkdir -p .cargo
 cat >> .cargo/config.toml << EOF
