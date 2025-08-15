@@ -46,7 +46,9 @@ EOF
 ^ allows the importing of cargo dependencies
 
 Go:
-go mod vendor = download of dependencies
+go mod vendor = download of dependencies in vendor folder. Needs to be compressed and added to source
+install -dm0755 %{buildroot}%{_binddir}
+go build -o %{buildroot}%{_bindir}
 
 NodeJS:
 npm install 'packagename'@'version' --omit=dev --cache ~/.npm   =  Will download cache and dependencies locally
