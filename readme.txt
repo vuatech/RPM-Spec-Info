@@ -45,9 +45,9 @@ cat >> .cargo/config.toml << EOF
 EOF
 ^ allows the importing of cargo dependencies
 
-cargo build --frozen
-install -dm0755 %{buildroot}%{_binddir}
-cargo install --path %{buildroot}{_bindir}
+cargo build --frozen --release
+install -dm0755 %{buildroot}%{_bindir}
+install -Dm0755 target/release/%{name} %{buildroot}%{_bindir}
 
 Go:
 go mod vendor = download of dependencies in vendor folder. Needs to be compressed and added to source
