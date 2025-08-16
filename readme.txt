@@ -1,4 +1,4 @@
-Copypaste response for issues:
+--Copypaste response for issues:
 Package has been published to cooker (repo). You can install the package by running sudo dnf install --enablerepo=(cooker-x86_64, cooker-x86_64-non-free, cooker-x86_64-restricted, or cooker-x86_64-extra). If you are on another architecture; substitute x86_64 for znver1 or aarch64.
 
 Macros:
@@ -44,6 +44,10 @@ cat >> .cargo/config.toml << EOF
 {results from cargo vendor at the end of the process}
 EOF
 ^ allows the importing of cargo dependencies
+
+cargo build --frozen
+install -dm0755 %{buildroot}%{_binddir}
+cargo install --path %{buildroot}{_bindir}
 
 Go:
 go mod vendor = download of dependencies in vendor folder. Needs to be compressed and added to source
