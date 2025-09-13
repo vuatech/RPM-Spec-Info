@@ -27,6 +27,10 @@ Macros:
 %{_specdir} = %{_topdir}/SPECS
 %{_srcrpmdir} =%{_topdir}/SRPMS
 %{_buildrootdir} = %{_topdir}/BUILDROOT
+%{_datadir}/bash-completions/completions/
+%{_datadir}/fish-completions/completions/
+%{_datadir}/zsh-completions/completions/
+
  %{pyver} = Used to call current version of python used by system. python%{pyver}dist(pygobject) will call python-gobject package.
 
 
