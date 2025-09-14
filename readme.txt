@@ -80,10 +80,3 @@ pnpm build(?) options in package.json file
 
 Electron:
 ELECTRON_CACHE=  allows to pick local directory to download needed archive
-
-git init
-git add 
-git commit -m "first commit"
-git branch -M master
-git remote add origin https://github.com/OpenMandrivaAssociation/*.git
-git push -u origin master
