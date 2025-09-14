@@ -27,6 +27,8 @@ Macros:
 %{_specdir} = %{_topdir}/SPECS
 %{_srcrpmdir} =%{_topdir}/SRPMS
 %{_buildrootdir} = %{_topdir}/BUILDROOT
+%{py_sitedir} = %{_libdir}/python%{pyver}/site-packages/
+
 %{_datadir}/bash-completions/completions/
 %{_datadir}/fish-completions/completions/
 %{_datadir}/zsh-completions/completions/
