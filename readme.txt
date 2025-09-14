@@ -56,7 +56,7 @@ install -Dpm755 target/release/%{name} %{buildroot}%{_bindir}
 
 Go:
 go mod vendor = download of dependencies in vendor folder. Needs to be compressed and added to source
-install -dm0755 %{buildroot}%{_binddir}
+install -dm0755 %{buildroot}%{_bindir}
 go build -o %{buildroot}%{_bindir}
 
 NodeJS:
