@@ -52,8 +52,7 @@ EOF
 ^ allows the importing of cargo dependencies
 
 cargo build --frozen --release
-install -dm0755 %{buildroot}%{_bindir}
-install -Dm0755 target/release/%{name} %{buildroot}%{_bindir}
+install -Dpm755 target/release/%{name} %{buildroot}%{_bindir}
 
 Go:
 go mod vendor = download of dependencies in vendor folder. Needs to be compressed and added to source
