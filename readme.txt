@@ -78,5 +78,6 @@ pnpm install --offline --frozen --force
 pnpm build(?) options in package.json file
 
 
+Note: /etc/xdg is used for .config location.
 Electron:
 ELECTRON_CACHE=  allows to pick local directory to download needed archive
